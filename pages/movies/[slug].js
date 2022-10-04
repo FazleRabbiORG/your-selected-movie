@@ -33,7 +33,7 @@ export const getStaticProps = async (ctx) => {
   return {
     props: {
       data: res.items[0],
-      validate: 1,
+      revalidate: 1,
     },
   };
 };
