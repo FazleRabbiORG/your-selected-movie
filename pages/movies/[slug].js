@@ -18,7 +18,7 @@ export const getStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   };
 };
 
@@ -39,6 +39,8 @@ export const getStaticProps = async (ctx) => {
 };
 
 function slug({ data }) {
+  if (!data) return <h1>Loading...</h1>;
+
   const { movieName, director, rating, image, releaseDate, details } =
     data.fields;
   return (
