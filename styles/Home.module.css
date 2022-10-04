@@ -12,6 +12,11 @@
   align-items: center;
 }
 
+.movieList{
+  display:grid;
+  grid-template-columns: 1fr 1fr ;
+}
+
 .footer {
   display: flex;
   flex: 1;
